@@ -12,7 +12,9 @@ public class TestController {
     //this is a test endpoint
     @GetMapping
     public String test(){
-        return "Hellow Springboot EC2 Example";
+        return "Space EC2" +
+                "This message is from Spring Boot backend running on EC2" +
+                "repo url: https://github.com/Dilusha-Ranasingha/EC2-Springboot-Example.git";
     }
 
     //this is a another test endpoint
