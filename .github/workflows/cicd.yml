@@ -20,17 +20,17 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build docker image
-        run: docker build -t AWSEC2Intergration/springboot-example .
+        run: docker build -t dilusharanasinghe/springboot-example .
       - name: Publish image to docker hub
-        run: docker push AWSEC2Intergration/springboot-example:latest
+        run: docker push dilusharanasinghe/springboot-example:latest
 
   deploy:
     needs: build
     runs-on: [aws-ec2]
     steps:
       - name: Pull Image from docker hub
-        run: docker pull AWSEC2Intergration/springboot-example:latest
+        run: docker pull dilusharanasinghe/springboot-example:latest
       - name: Delete old container
         run: docker rm -f EC2-springboot-example-container
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name EC2-springboot-example-container AWSEC2Intergration/springboot-example
+        run: docker run -d -p 8080:8080 --name EC2-springboot-example-container dilusharanasinghe/springboot-example
