@@ -21,7 +21,7 @@ jobs:
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build docker image
         run: docker build -t dilusharanasinghe/springboot-example .
-      - name: Publish image to docker hub
+      - name: Publish image to dockerhub
         run: docker push dilusharanasinghe/springboot-example:latest
 
   deploy:
