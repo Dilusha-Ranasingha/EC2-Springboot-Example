@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "https://ec-2-spring.vercel.app/")  // Allow frontend running here
+@CrossOrigin(origins = {
+        "http://localhost:5174",
+        "https://ec-2-spring.vercel.app"
+}) // Allow frontend running here
 public class TestController {
 
 
