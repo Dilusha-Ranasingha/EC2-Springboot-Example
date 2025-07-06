@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = {
-        "http://localhost:5174",
-        "https://ec-2-spring.vercel.app"
+        "http://13.62.53.79:3000"
 }) // Allow frontend running here
 public class TestController {
 
