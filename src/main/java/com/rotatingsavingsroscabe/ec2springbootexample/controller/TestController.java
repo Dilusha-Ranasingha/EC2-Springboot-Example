@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = {
-        "http://13.62.53.79:3000"
+        "http://13.62.53.79"
 }) // Allow frontend running here
 public class TestController {
 
